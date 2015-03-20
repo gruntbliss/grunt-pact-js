@@ -1,6 +1,6 @@
 {
   "name": "grunt-pact-js",
-  "version": "0.0.0",
+  "version": "v0.2.0",
   "private": true,
   "dependencies": {},
   "devDependencies": {

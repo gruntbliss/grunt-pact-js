@@ -44,7 +44,7 @@ To recreate the README.MD just run `grunt build-contrib`.
 - Karma or any other task doesn't work!
 
 ```
-  >> rm -rf node_modules/grunt-devbliss/node_modules/*
+  >> rm -rf node_modules/grunt-pact-js/node_modules/*
   >> npm install
 ```
 
