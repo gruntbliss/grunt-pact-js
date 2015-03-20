@@ -9,10 +9,12 @@
 'use strict';
 
 module.exports = function (grunt) {
-
-    // Project configuration.
-    grunt.initConfig({});
-
+    grunt.loadNpmTasks('grunt-shell-spawn');
+    grunt.loadNpmTasks('grunt-wait');
+    grunt.loadNpmTasks('grunt-mkdir');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadTasks('tasks');
-    
+
+
 };
