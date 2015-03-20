@@ -42,13 +42,6 @@ module.exports = function (grunt) {
                 configFile: 'test/karma.conf.js'
             };
 
-
-            //extendGruntPlugin(grunt, require('grunt-contrib-connect/tasks/connect'), {
-            //    'connect.test': connect
-            //});
-            //
-            //grunt.task.run('connect:test');
-
             extendGruntPlugin(grunt, require('grunt-shell-spawn/tasks/shell'), {
                 'shell.pact': shellPact
             });
@@ -67,94 +60,11 @@ module.exports = function (grunt) {
 
             grunt.task.run('karma:pact');
 
-            //extendGruntPlugin(grunt, require('grunt-wait/tasks/wait'), {
-            //    'protractor': {
-            //        configFile: "node_modules/grunt-pact-js/protractor.config.js",
-            //        keepAlive: true,
-            //        args: {
-            //            verbose: true,
-            //            specs: '<%= app_files.jse2e %>',
-            //            baseUrl: '<%= connect.options.protocol %>://localhost:<%= connect.test.options.port %>/<%= pkg.name %>/'
-            //        }
-            //    }
-            //    ,
-            //});
-            //
-            //grunt.task.run('protractor');
-
             grunt.task.run('shell:pact:kill');
-            //grunt.initConfig({
-            //
-            //    shell: {
-            //        options: {
-            //            stdout: true,
-            //            stderr: true,
-            //            failOnError: true
-            //        },
-            //        pact: {
-            //            command: 'pact-mock-service -p 9700',
-            //            options: {
-            //                async: true
-            //            }
-            //        }
-            //    },
-            //
-            //    wait: {
-            //        options: {
-            //            delay: 1000
-            //        },
-            //        pact: {}
-            //    },
-            //
-            //    mkdir: {
-            //        tmp: {
-            //            options: {
-            //                create: ['.tmp/chrome', '.tmp/pacts']
-            //            }
-            //        }
-            //    },
-            //
-            //    clean: [
-            //        '<%= build_dir %>',
-            //        '<%= release_dir %>',
-            //        '<%= package_dir %>',
-            //        '<%= mkdir.tmp.options.create %>' /*.tmp cleanup */
-            //    ],
-            //
-            //    connect: {
-            //        options: {
-            //            protocol: 'http'
-            //        },
-            //        test: {
-            //            options: {
-            //                port: 8181,
-            //                base: '<%= build_dir %>'
-            //            }
-            //        }
-            //    },
-            //
-            //    protractor: {
-            //        options: {
-            //            configFile: "protractor.config.js",
-            //            keepAlive: true,
-            //            args: {
-            //                verbose: true,
-            //                specs: '<%= app_files.jse2e %>',
-            //                baseUrl: '<%= connect.options.protocol %>://localhost:<%= connect.test.options.port %>/<%= pkg.name %>/'
-            //            }
-            //        },
-            //        all: {}
-            //    }
+
         }
-    )
-    ;
-
-
-//grunt.registerTask('Aenrico2e', ['connect:test', 'shell:pact', 'wait:pact', 'protractor', 'shell:pact:kill']);
-//grunt.log.writeln('Start contract Tests');
-
-}
-;
+    );
+};
 
 
 
