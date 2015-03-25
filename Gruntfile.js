@@ -12,6 +12,4 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-force-task');
     grunt.loadTasks('tasks');
-    grunt.loadTasks('installMockService');
-
 };
