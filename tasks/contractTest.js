@@ -45,7 +45,7 @@ var contractTest = function (grunt) {
             delay: 1000
         }
     }
-
+    
     var karmaPact = {
         configFile: 'test/karma.conf.js',
         singleRun: true
@@ -53,6 +53,7 @@ var contractTest = function (grunt) {
     };
 
     var initTasks = function () {
+
         extendGruntPlugin(grunt, require('grunt-shell-spawn/tasks/shell'), {
             'shell.serverStart': shellServerStart,
             'shell.serverStop': shellServerStop
