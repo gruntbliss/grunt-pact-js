@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
- Integrating Pact Consumer Tests with Grunt and Protractor
+> Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -21,9 +21,9 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-pact-js');
 ```
 
-###The "contractTest" tasks
+###The "contracttest" tasks
 
-_Run this task with the `grunt contractTest` command._
+_Run this task with the `grunt contracttest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please reat the chapter [Install the Mock Server](#install-the-mock-server)
 
@@ -42,6 +42,20 @@ Windows users must run the install command after following Wiki instructions
 
 (This Plugin is not tested with Windows)
 
+
+###Options
+
+```
+    grunt.initConfig({
+        contracttest: {
+            options: {
+                port: 8181,
+                karmaConfigFile: 'test/karma.conf.js',
+                pactDir: 'tmp'
+            }
+        }
+    });
+```
 ###Local set up
 
 To work on this plugin locally, use the [npm link](https://docs.npmjs.com/cli/link) feature.
@@ -86,4 +100,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Wed Mar 25 2015 18:52:18.*
+*This file was generated on Wed Mar 25 2015 19:33:50.*

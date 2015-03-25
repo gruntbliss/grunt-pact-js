@@ -1,6 +1,6 @@
-#The "contractTest" tasks
+#The "contracttest" tasks
 
-_Run this task with the `grunt contractTest` command._
+_Run this task with the `grunt contracttest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please reat the chapter [Install the Mock Server](#install-the-mock-server)
 
@@ -19,6 +19,20 @@ Windows users must run the install command after following Wiki instructions
 
 (This Plugin is not tested with Windows)
 
+
+#Options
+
+```
+    grunt.initConfig({
+        contracttest: {
+            options: {
+                port: 8181,
+                karmaConfigFile: 'test/karma.conf.js',
+                pactDir: 'tmp'
+            }
+        }
+    });
+```
 #Local set up
 
 To work on this plugin locally, use the [npm link](https://docs.npmjs.com/cli/link) feature.
