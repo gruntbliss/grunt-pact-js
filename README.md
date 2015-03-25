@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
-> Integrating Pact Consumer Tests with Grunt and Protractor
+> > Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -45,6 +45,8 @@ Windows users must run the install command after following Wiki instructions
 
 ###Options
 
+If yo will change option you can do this with:
+
 ```
     grunt.initConfig({
         contracttest: {
@@ -53,7 +55,13 @@ Windows users must run the install command after following Wiki instructions
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             }
-        }
+        },
+
+        installmockservice: {
+            options: {
+                gemfile: 'your-custom-file-if-you-need'
+            }
+        },
     });
 ```
 ###Local set up
@@ -100,4 +108,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Wed Mar 25 2015 19:33:50.*
+*This file was generated on Wed Mar 25 2015 19:39:34.*

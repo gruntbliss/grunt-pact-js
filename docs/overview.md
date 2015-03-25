@@ -22,6 +22,8 @@ Windows users must run the install command after following Wiki instructions
 
 #Options
 
+If yo will change option you can do this with:
+
 ```
     grunt.initConfig({
         contracttest: {
@@ -30,7 +32,13 @@ Windows users must run the install command after following Wiki instructions
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             }
-        }
+        },
+
+        installmockservice: {
+            options: {
+                gemfile: 'your-custom-file-if-you-need'
+            }
+        },
     });
 ```
 #Local set up
