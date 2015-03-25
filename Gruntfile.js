@@ -15,6 +15,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-protractor-runner');
     grunt.loadTasks('tasks');
-
+    grunt.loadTasks('installMockService');
 
 };
