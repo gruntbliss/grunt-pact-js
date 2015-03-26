@@ -10,7 +10,6 @@
 
 module.exports = function (grunt) {
 
-    grunt.loadNpmTasks('grunt-force-task');
     grunt.loadNpmTasks('grunt-contrib-internal');
     grunt.loadTasks('tasks');
 };
