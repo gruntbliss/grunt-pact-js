@@ -45,7 +45,7 @@ var contractTest = function (grunt) {
             delay: 1000
         }
     }
-    
+
     var karmaPact = {
         configFile: 'test/karma.conf.js',
         singleRun: true
@@ -74,10 +74,19 @@ var contractTest = function (grunt) {
 
     grunt.registerTask('contractTest', 'Run Pact Consumer Tests with Grunt and Protractor.', function () {
 
+
             initTasks();
+
+            grunt.warn = grunt.fail.warn = function (warning, callback) {
+                grunt.task.run('shell:serverStop');
+                grunt.log.error(warning);
+                process.exit(3)
+            }
+
+
             grunt.task.run('shell:serverStart');
             grunt.task.run('wait:pact');
-            grunt.task.run('force:karma:pact');
+            grunt.task.run('karma:pact');
             grunt.task.run('shell:serverStop');
         }
     );
