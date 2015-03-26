@@ -7,7 +7,12 @@ This plugin relies on the Ruby pact-mock_service. Please read the chapter [Insta
 
 #Install pact consumer library
 
-For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install thie library with bower or nodejs and make it accessible over your karmer config file.
+For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install the library with bower or nodejs and make it accessible over your `karmer config` file.
+
+```
+bower install pact-consumer-js-dsl --save-dev
+```
+
 
 ```javascript
 module.exports = function (config) {
