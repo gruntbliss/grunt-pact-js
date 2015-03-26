@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
- Integrating Pact Consumer Tests with Grunt and Protractor
+> Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -25,7 +25,29 @@ grunt.loadNpmTasks('grunt-pact-js');
 
 _Run this task with the `grunt contractTest` command._
 
-This plugin relies on the Ruby pact-mock_service. Please reat the chapter [Install the Mock Server](#install-the-mock-server)
+This plugin relies on the Ruby pact-mock_service. Please read the chapter [Install the Mock Server](#install-the-mock-server)
+
+
+###Install pact consumer library
+
+For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install thie library with bower or nodejs and make it accessible over your karmer config file.
+
+```javascript
+module.exports = function (config) {
+    config.set({
+        ...
+
+        // list of files / patterns to load in the browser
+        files: [
+          // if you are using this example to setup your own project load pact from the node_modules directory
+          // i.e. node_modules/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js
+          'app/bower_components/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js',
+
+        ],
+        ...
+    }
+}
+```
 
 ###Install the Mock Server
 
@@ -86,4 +108,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Wed Mar 25 2015 18:52:18.*
+*This file was generated on Thu Mar 26 2015 19:57:26.*
