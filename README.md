@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
-> > Integrating Pact Consumer Tests with Grunt and Protractor
+> > > Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -72,25 +72,56 @@ Windows users must run the install command after following Wiki instructions
 
 ###Options
 
-If yo will change option you can do this with:
+If yo will change some option you can do this for example with:
+
+```
+grunt.initConfig({
+        contractTest: {
+            options: {
+                port: 8181,
+            }
+        }
+    });
+```
+
+If you want change all configuration yo can do this with:
+
 
 ```
     grunt.initConfig({
-        contracttest: {
+        contractTest: {
             options: {
                 port: 8181,
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             }
         },
+    });
+```
 
-        installmockservice: {
+If you want add a custom game file for the mock service you can do this with:
+
+```
+    grunt.initConfig({
+        installMockService: {
             options: {
                 gemfile: 'your-custom-file-if-you-need'
             }
         },
     });
 ```
+
+The current Gem file contains the follow content:
+
+```
+    source 'https://rubygems.org'
+    gem 'pact-mock_service', '~> 0.4.1'
+```
+
+It is located in `node_modules/grunt-pact-js/Gemfile`.
+
+
+
 ###Local set up
 
 To work on this plugin locally, use the [npm link](https://docs.npmjs.com/cli/link) feature.
@@ -135,7 +166,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-
-*This file was generated on Wed Mar 25 2015 19:39:34.*
-
-
+*This file was generated on Thu Mar 26 2015 20:19:59.*
