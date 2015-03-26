@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
-> > > Integrating Pact Consumer Tests with Grunt and Protractor
+> > > > Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -72,7 +72,7 @@ Windows users must run the install command after following Wiki instructions
 
 ###Options
 
-If yo will change some option you can do this for example with:
+If you will change some option you can do this for example with:
 
 ```
 grunt.initConfig({
@@ -84,7 +84,7 @@ grunt.initConfig({
     });
 ```
 
-If you want change all configuration yo can do this with:
+If you want change all configuration you can do this with:
 
 
 ```
@@ -99,7 +99,7 @@ If you want change all configuration yo can do this with:
     });
 ```
 
-If you want add a custom game file for the mock service you can do this with:
+If you want add a custom Gem file for the mock service you can do this with:
 
 ```
     grunt.initConfig({
@@ -166,4 +166,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Thu Mar 26 2015 20:19:59.*
+*This file was generated on Thu Mar 26 2015 20:22:38.*
