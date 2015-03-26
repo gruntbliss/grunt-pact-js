@@ -12,7 +12,11 @@ var extendGruntPlugin = require('extend-grunt-plugin');
 
 var contractTest = function (grunt) {
 
-    grunt.registerTask('contracttest', 'Run Pact Consumer Tests with Grunt and Protractor.', function () {
+    grunt.registerTask("warning-exit", "Call process.exit", function () {
+        process.exit(3);
+    });
+
+    grunt.registerTask('contractTest', 'Run Pact Consumer Tests with Grunt and Protractor.', function () {
 
 
             var options = this.options({
@@ -76,14 +80,15 @@ var contractTest = function (grunt) {
             });
 
 
-            grunt.task.run('shell:serverStart');
-            grunt.task.run('wait:pact');
-            grunt.task.run('force:karma:pact');
-            grunt.task.run('shell:serverStop');
+            grunt.warn = grunt.fail.warn = function (warning, callback) {
+                grunt.log.warn(warning);
+                grunt.task.run('shell:serverStop', 'warning-exit');
+            };
+
+            grunt.task.run('shell:serverStart', 'wait:pact', 'karma:pact', 'shell:serverStop');
+
         }
     );
 };
 
 module.exports = contractTest;
-
-

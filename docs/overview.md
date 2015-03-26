@@ -2,7 +2,34 @@
 
 _Run this task with the `grunt contracttest` command._
 
-This plugin relies on the Ruby pact-mock_service. Please reat the chapter [Install the Mock Server](#install-the-mock-server)
+This plugin relies on the Ruby pact-mock_service. Please read the chapter [Install the Mock Server](#install-the-mock-server)
+
+
+#Install pact consumer library
+
+For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install the library with bower or nodejs and make it accessible over your `karmer config` file.
+
+```
+bower install pact-consumer-js-dsl --save-dev
+```
+
+
+```javascript
+module.exports = function (config) {
+    config.set({
+        ...
+
+        // list of files / patterns to load in the browser
+        files: [
+          // if you are using this example to setup your own project load pact from the node_modules directory
+          // i.e. node_modules/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js
+          'app/bower_components/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js',
+
+        ],
+        ...
+    }
+}
+```
 
 #Install the Mock Server
 
@@ -22,25 +49,56 @@ Windows users must run the install command after following Wiki instructions
 
 #Options
 
-If yo will change option you can do this with:
+If yo will change some option you can do this for example with:
+
+```
+grunt.initConfig({
+        contractTest: {
+            options: {
+                port: 8181,
+            }
+        }
+    });
+```
+
+If you want change all configuration yo can do this with:
+
 
 ```
     grunt.initConfig({
-        contracttest: {
+        contractTest: {
             options: {
                 port: 8181,
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             }
         },
+    });
+```
 
-        installmockservice: {
+If you want add a custom game file for the mock service you can do this with:
+
+```
+    grunt.initConfig({
+        installMockService: {
             options: {
                 gemfile: 'your-custom-file-if-you-need'
             }
         },
     });
 ```
+
+The current Gem file contains the follow content:
+
+```
+    source 'https://rubygems.org'
+    gem 'pact-mock_service', '~> 0.4.1'
+```
+
+It is located in `node_modules/grunt-pact-js/Gemfile`.
+
+
+
 #Local set up
 
 To work on this plugin locally, use the [npm link](https://docs.npmjs.com/cli/link) feature.

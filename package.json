@@ -32,8 +32,7 @@
     "karma-phantomjs-launcher": "0.1.x",
     "karma-chrome-launcher": "0.1.x",
     "karma-firefox-launcher": "0.1.x",
-    "karma-spec-reporter": "0.0.16",
-    "grunt-force-task": "1.0.x"
+    "karma-spec-reporter": "0.0.16"
   },
   "devDependencies": {
     "grunt": "0.4.x",

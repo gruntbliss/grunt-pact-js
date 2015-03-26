@@ -10,8 +10,6 @@
 
 module.exports = function (grunt) {
 
-    // Project configuration.
-    grunt.loadNpmTasks('grunt-force-task');
     grunt.loadNpmTasks('grunt-contrib-internal');
     grunt.loadTasks('tasks');
 };
