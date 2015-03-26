@@ -12,14 +12,6 @@ var extendGruntPlugin = require('extend-grunt-plugin');
 
 var contractTest = function (grunt) {
 
-    var connect = {
-        options: {
-            protocol: 'http',
-            port: 8181,
-            base: '<%= build_dir %>'
-        }
-    };
-
     var shellServerStart = {
         command: 'BUNDLE_GEMFILE="node_modules/grunt-pact-js/Gemfile"  bundle exec pact-mock-service restart -p 1234 -l tmp/pact.log --pact-dir tmp/pacts',
         options: {
@@ -49,6 +41,7 @@ var contractTest = function (grunt) {
     var karmaPact = {
         configFile: 'test/karma.conf.js',
         singleRun: true
+        //files: 'node_modules/grunt-pact-js/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js'
 
     };
 
@@ -67,31 +60,23 @@ var contractTest = function (grunt) {
             'karma.pact': karmaPact
         });
 
-        extendGruntPlugin(grunt, require('grunt-force-task/tasks/force'), {
-            'force.karma': 'pact'
-        });
-    }
+    };
+
+    grunt.registerTask("warning-exit", "Call process.exit", function () {
+        process.exit(3);
+    });
 
     grunt.registerTask('contractTest', 'Run Pact Consumer Tests with Grunt and Protractor.', function () {
-
-
             initTasks();
 
             grunt.warn = grunt.fail.warn = function (warning, callback) {
-                grunt.task.run('shell:serverStop');
-                grunt.log.error(warning);
-                process.exit(3)
-            }
+                grunt.log.warn(warning);
+                grunt.task.run('shell:serverStop', 'warning-exit');
+            };
 
-
-            grunt.task.run('shell:serverStart');
-            grunt.task.run('wait:pact');
-            grunt.task.run('karma:pact');
-            grunt.task.run('shell:serverStop');
+            grunt.task.run('shell:serverStart', 'wait:pact', 'karma:pact', 'shell:serverStop');
         }
     );
 };
 
 module.exports = contractTest;
-
-

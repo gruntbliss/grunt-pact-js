@@ -4,6 +4,27 @@ _Run this task with the `grunt contractTest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please reat the chapter [Install the Mock Server](#install-the-mock-server)
 
+#Install pact consumer library
+
+For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install thie library with bower or nodejs and make it accessible over youre karmer config file.
+
+```javascript
+module.exports = function (config) {
+    config.set({
+        ...
+
+        // list of files / patterns to load in the browser
+        files: [
+          // if you are using this example to setup your own project load pact from the node_modules directory
+          // i.e. node_modules/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js
+          'app/bower_components/pact-consumer-js-dsl/dist/pact-consumer-js-dsl.js',
+
+        ],
+        ...
+    }
+}
+```
+
 #Install the Mock Server
 
 ##OS X or Linux
