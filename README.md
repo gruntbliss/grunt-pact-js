@@ -168,6 +168,7 @@ See also:
 ## Release History
 
  * 2015-03-20   v0.1.0   initial setup
+ * 2015-03-20   v0.1.0   Added config options
 
 ---
 
