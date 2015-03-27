@@ -15,7 +15,7 @@ var contractTest = function (grunt) {
     var registerTasks = function (options) {
         var shellServerStart = {
             command: 'BUNDLE_GEMFILE="node_modules/grunt-pact-js/Gemfile"  bundle exec pact-mock-service restart -p ' +
-            options.port + ' -l  ' +
+            options.mockServicePort + ' -l  ' +
             options.pactDir + '/pact.log --pact-dir ' +
             options.pactDir + '/pacts',
             options: {
@@ -27,7 +27,7 @@ var contractTest = function (grunt) {
         };
 
         var shellServerStop = {
-            command: 'BUNDLE_GEMFILE="node_modules/grunt-pact-js/Gemfile" bundle exec pact-mock-service stop -p ' + options.port,
+            command: 'BUNDLE_GEMFILE="node_modules/grunt-pact-js/Gemfile" bundle exec pact-mock-service stop -p ' + options.mockServicePort,
             options: {
                 stdout: true,
                 stderr: true,
@@ -75,7 +75,7 @@ var contractTest = function (grunt) {
 
 
             var options = this.options({
-                port: 1234,
+                mockServicePort: 1234,
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             });

@@ -2,3 +2,7 @@ v0.1.0:
  date: 2015-03-20
  changes:
    - initial setup
+v0.2.0:
+ date: 2015-03-20
+ changes:
+   - Added config options

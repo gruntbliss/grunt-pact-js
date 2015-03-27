@@ -1,6 +1,6 @@
 # grunt-pact-js v0.2.0
 
-> > > > Integrating Pact Consumer Tests with Grunt and Protractor
+> > Integrating Pact Consumer Tests with Grunt and Protractor
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -86,7 +86,7 @@ If you will change some option you can do this for example with:
 grunt.initConfig({
         contractTest: {
             options: {
-                port: 8181,
+                mockServicePort: 8181,
             }
         }
     });
@@ -99,7 +99,7 @@ If you want change all configuration you can do this with:
     grunt.initConfig({
         contractTest: {
             options: {
-                port: 8181,
+                mockServicePort: 8181,
                 karmaConfigFile: 'test/karma.conf.js',
                 pactDir: 'tmp'
             }
@@ -127,6 +127,7 @@ The current Gem file contains the follow content:
 ```
 
 It is located in `node_modules/grunt-pact-js/Gemfile`.
+
 
 
 ###Local set up
@@ -168,10 +169,10 @@ See also:
 ## Release History
 
  * 2015-03-20   v0.1.0   initial setup
- * 2015-03-20   v0.1.0   Added config options
+ * 2015-03-20   v0.2.0   Added config options
 
 ---
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Thu Mar 26 2015 20:22:38.*
+*This file was generated on Fri Mar 27 2015 15:10:55.*
