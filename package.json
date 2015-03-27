@@ -1,6 +1,6 @@
 {
   "name": "grunt-pact-js",
-  "version": "v0.2.0",
+  "version": "0.2.0",
   "homepage": "https://github.com/gruntjs/grunt-contrib",
   "author": {
     "name": "Devbliss Team",
@@ -38,6 +38,5 @@
     "grunt": "0.4.x",
     "grunt-contrib-internal": "0.4.x"
   },
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }
