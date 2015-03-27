@@ -1,6 +1,6 @@
-# grunt-pact-js v0.2.1
+# grunt-pact-js v0.2.2
 
-> > > > Generating Pact Consumer Tests with Grunt and Karma
+> Generating Pact Consumer Tests with Grunt and Karma
 
 
 _Note that this is not an official Grunt plugin release! If you want to use this in a project, please be sure to follow the instructions for installing development versions, as outlined in the [Installing Grunt](http://gruntjs.com/installing-grunt) guide._
@@ -168,6 +168,7 @@ See also:
 
 ## Release History
 
+ * 2015-03-20   v0.2.2   Fixed private flag and grunt-force-task dep
  * 2015-03-20   v0.2.1   Fixed typos in documentation
  * 2015-03-20   v0.2.0   Added config options
  * 2015-03-20   v0.1.0   initial setup
@@ -176,4 +177,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Fri Mar 27 2015 16:07:36.*
+*This file was generated on Fri Mar 27 2015 17:28:51.*

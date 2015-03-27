@@ -1,7 +1,8 @@
 {
   "name": "grunt-pact-js",
-  "version": "v0.2.1",
+  "version": "v0.2.2",
   "homepage": "https://github.com/gruntjs/grunt-contrib",
+  "description": "Generating Pact Consumer Tests with Grunt and Karma",
   "author": {
     "name": "Devbliss Team",
     "url": "http://devbliss.com/"
