@@ -1,8 +1,12 @@
-v0.1.0:
+v0.2.1:
  date: 2015-03-20
  changes:
-   - initial setup
+   - Fixed typos in documentation
 v0.2.0:
  date: 2015-03-20
  changes:
    - Added config options
+v0.1.0:
+ date: 2015-03-20
+ changes:
+   - initial setup

@@ -1,11 +1,11 @@
-#The "contracttest" tasks
+# The "contracttest" tasks
 
 _Run this task with the `grunt contracttest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please read the chapter [Install the Mock Server](#install-the-mock-server)
 
 
-#Install pact consumer library
+# Install pact consumer library
 
 For your tests you need [pact-consumer-js-dsl](https://github.com/DiUS/pact-consumer-js-dsl). Install the library with bower or nodejs and make it accessible over your `karmer config` file.
 
@@ -31,31 +31,31 @@ module.exports = function (config) {
 }
 ```
 
-#Install Ruby, Gem, Bundler and Pact-MockServer
+# Install Ruby, Gem, Bundler and Pact-MockServer
 
-##OS X or Linux
+## OS X or Linux
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Bundler](http://bundler.io/) and [RubyGems](https://rubygems.org/pages/download) installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem install bundler`.
 
-##Windows
+## Windows
 If on ``Windows``, please refer to the [Installing pact-mock-service on Windows](https://github.com/bethesque/pact-mock_service/wiki/Installing-the-pact-mock_service-gem-on-Windows)
 
 Windows users must run the install command after following Wiki instructions
 
 (This Plugin is not tested with Windows)
 
-##Install Mock Server
+## Install Mock Server
 
 Depending on your use case you can use different commands.
 
-###Using the grunt plugin in a project
+### Using the grunt plugin in a project
 
   Run the grunt task `grunt installMockService`.
 
-###Developing the plugin
+### Developing the plugin
 
  Execute `bundle install` inside the grunt pact js project folder to install pact-mock_service.
 
-#Options
+# Options
 
 If you will change some option you can do this for example with:
 
@@ -107,15 +107,15 @@ It is located in `node_modules/grunt-pact-js/Gemfile`.
 
 
 
-#Local set up
+# Local set up
 
 To work on this plugin locally, use the [npm link](https://docs.npmjs.com/cli/link) feature.
 
-#Recreate README.MD
+# Recreate README.MD
 
 To recreate the README.MD just run `grunt build-contrib`.
 
-#Troubleshooting
+# Troubleshooting
 
 - Karma or any other task doesn't work!
 
@@ -133,7 +133,7 @@ To recreate the README.MD just run `grunt build-contrib`.
   >> npm install
 ```
 
-#References
+# References
 
 See also:
 
