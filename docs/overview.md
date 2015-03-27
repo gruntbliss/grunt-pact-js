@@ -1,6 +1,6 @@
-#The "contractTest" tasks
+#The "contracttest" tasks
 
-_Run this task with the `grunt contractTest` command._
+_Run this task with the `grunt contracttest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please read the chapter [Install the Mock Server](#install-the-mock-server)
 
@@ -31,13 +31,10 @@ module.exports = function (config) {
 }
 ```
 
-#Install the Mock Server
+#Install Ruby, Gem, Bundler and Pact-MockServer
 
 ##OS X or Linux
-
-_Run this task with the `grunt installMockServer` command._
-
-This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Bundler](http://bundler.io/) and [RubyGems](https://rubygems.org/pages/download) installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem install bundler && bundle install` to install pact-mock_service.
+This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Bundler](http://bundler.io/) and [RubyGems](https://rubygems.org/pages/download) installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem install bundler`.
 
 ##Windows
 If on ``Windows``, please refer to the [Installing pact-mock-service on Windows](https://github.com/bethesque/pact-mock_service/wiki/Installing-the-pact-mock_service-gem-on-Windows)
@@ -45,6 +42,70 @@ If on ``Windows``, please refer to the [Installing pact-mock-service on Windows]
 Windows users must run the install command after following Wiki instructions
 
 (This Plugin is not tested with Windows)
+
+##Install Mock Server
+
+Depending on your use case you can use different commands.
+
+###Using the grunt plugin in a project
+
+  Run the grunt task `grunt installMockService`.
+
+###Developing the plugin
+
+ Execute `bundle install` inside the grunt pact js project folder to install pact-mock_service.
+
+#Options
+
+If you will change some option you can do this for example with:
+
+```
+grunt.initConfig({
+        contractTest: {
+            options: {
+                mockServicePort: 8181,
+            }
+        }
+    });
+```
+
+If you want change all configuration you can do this with:
+
+
+```
+    grunt.initConfig({
+        contractTest: {
+            options: {
+                mockServicePort: 8181,
+                karmaConfigFile: 'test/karma.conf.js',
+                pactDir: 'tmp'
+            }
+        },
+    });
+```
+
+If you want add a custom Gem file for the mock service you can do this with:
+
+```
+    grunt.initConfig({
+        installMockService: {
+            options: {
+                gemfile: 'your-custom-file-if-you-need'
+            }
+        },
+    });
+```
+
+The current Gem file contains the follow content:
+
+```
+    source 'https://rubygems.org'
+    gem 'pact-mock_service', '~> 0.4.1'
+```
+
+It is located in `node_modules/grunt-pact-js/Gemfile`.
+
+
 
 #Local set up
 

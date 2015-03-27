@@ -21,9 +21,9 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-pact-js');
 ```
 
-###The "contractTest" tasks
+###The "contracttest" tasks
 
-_Run this task with the `grunt contractTest` command._
+_Run this task with the `grunt contracttest` command._
 
 This plugin relies on the Ruby pact-mock_service. Please read the chapter [Install the Mock Server](#install-the-mock-server)
 
@@ -72,11 +72,63 @@ Depending on your use case you can use different commands.
 
 #####Using the grunt plugin in a project
 
-  Run the grunt task `grunt installMockServer`.
+  Run the grunt task `grunt installMockService`.
 
 #####Developing the plugin
 
  Execute `bundle install` inside the grunt pact js project folder to install pact-mock_service.
+
+###Options
+
+If you will change some option you can do this for example with:
+
+```
+grunt.initConfig({
+        contractTest: {
+            options: {
+                mockServicePort: 8181,
+            }
+        }
+    });
+```
+
+If you want change all configuration you can do this with:
+
+
+```
+    grunt.initConfig({
+        contractTest: {
+            options: {
+                mockServicePort: 8181,
+                karmaConfigFile: 'test/karma.conf.js',
+                pactDir: 'tmp'
+            }
+        },
+    });
+```
+
+If you want add a custom Gem file for the mock service you can do this with:
+
+```
+    grunt.initConfig({
+        installMockService: {
+            options: {
+                gemfile: 'your-custom-file-if-you-need'
+            }
+        },
+    });
+```
+
+The current Gem file contains the follow content:
+
+```
+    source 'https://rubygems.org'
+    gem 'pact-mock_service', '~> 0.4.1'
+```
+
+It is located in `node_modules/grunt-pact-js/Gemfile`.
+
+
 
 ###Local set up
 
@@ -117,9 +169,10 @@ See also:
 ## Release History
 
  * 2015-03-20   v0.1.0   initial setup
+ * 2015-03-20   v0.2.0   Added config options
 
 ---
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Thu Mar 26 2015 20:00:36.*
+*This file was generated on Fri Mar 27 2015 15:10:55.*
