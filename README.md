@@ -169,14 +169,14 @@ See also:
 ## Release History
 
  * 2015-03-27   v0.3.0-SNAPSHOT   fixed repo urls in package.json
- * 2015-03-27   v0.2.3   Remove grunt as devDependencies
- * 2015-03-27   v0.2.2   Fixed private flag and grunt-force-task dep
- * 2015-03-27   v0.2.1   Fixed typos in documentation
- * 2015-03-27   v0.2.0   Added config options
- * 2015-03-27   v0.1.0   initial setup
+ * 2015-03-20   v0.2.3   Remove grunt as devDependencies
+ * 2015-03-20   v0.2.2   Fixed private flag and grunt-force-task dep
+ * 2015-03-20   v0.2.1   Fixed typos in documentation
+ * 2015-03-20   v0.2.0   Added config options
+ * 2015-03-20   v0.1.0   initial setup
 
 ---
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Fri Mar 27 2015 17:47:15.*
+*This file was generated on Fri Mar 27 2015 17:48:57.*
