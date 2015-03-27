@@ -4,3 +4,6 @@ node_modules/
 # IntelliJ
 .idea/
 **/*.iml
+
+.bundle.lock
+Gemfile.lock
