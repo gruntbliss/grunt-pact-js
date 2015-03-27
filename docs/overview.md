@@ -35,7 +35,7 @@ module.exports = function (config) {
 
 ##OS X or Linux
 
-_Run this task with the `grunt installMockServer` command._
+_Run this task with the `grunt installMockService` command._
 
 This task requires you to have [Ruby](http://www.ruby-lang.org/en/downloads/), [Bundler](http://bundler.io/) and [RubyGems](https://rubygems.org/pages/download) installed. If you're on OS X or Linux you probably already have Ruby installed; test with `ruby -v` in your terminal. When you've confirmed you have Ruby installed, run `gem install bundler && bundle install` to install pact-mock_service.
 

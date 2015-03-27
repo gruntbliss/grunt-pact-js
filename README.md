@@ -72,7 +72,7 @@ Depending on your use case you can use different commands.
 
 #####Using the grunt plugin in a project
 
-  Run the grunt task `grunt installMockServer`.
+  Run the grunt task `grunt installMockService`.
 
 #####Developing the plugin
 

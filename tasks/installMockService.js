@@ -12,7 +12,7 @@ var extendGruntPlugin = require('extend-grunt-plugin');
 
 module.exports = function (grunt) {
 
-    grunt.registerTask('installmockservice', 'This task install the Ruby Mock-Service wit Bundler and Gem.', function () {
+    grunt.registerTask('installMockService', 'This task install the Ruby Mock-Service wit Bundler and Gem.', function () {
 
 
             var options = this.options({
