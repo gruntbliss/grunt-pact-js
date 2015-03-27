@@ -1,20 +1,24 @@
+v0.3.0-SNAPSHOT:
+ date: 2015-03-27
+ changes:
+   - fixed repo urls in package.json
 v0.2.3:
- date: 2015-03-20
+ date: 2015-03-27
  changes:
    - Remove grunt as devDependencies
 v0.2.2:
- date: 2015-03-20
+ date: 2015-03-27
  changes:
    - Fixed private flag and grunt-force-task dep
 v0.2.1:
- date: 2015-03-20
+ date: 2015-03-27
  changes:
    - Fixed typos in documentation
 v0.2.0:
- date: 2015-03-20
+ date: 2015-03-27
  changes:
    - Added config options
 v0.1.0:
- date: 2015-03-20
+ date: 2015-03-27
  changes:
    - initial setup
