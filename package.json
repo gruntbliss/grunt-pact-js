@@ -19,25 +19,24 @@
       "url": "https://github.com/devbliss/grunt-pact-js/blob/master/LICENSE"
     }
   ],
-  "private": true,
+  "private": false,
   "dependencies": {
-    "grunt": "0.4.x",
-    "grunt-wait": "0.1.x",
-    "grunt-shell-spawn": "0.3.x",
     "extend-grunt-plugin": "0.1.x",
-    "karma": "0.12.x",
+    "grunt": "0.4.x",
+    "grunt-force-task": "^1.0.0",
     "grunt-karma": "0.10.x",
+    "grunt-shell-spawn": "0.3.x",
+    "grunt-wait": "0.1.x",
     "jasmine-core": "2.2.x",
-    "karma-jasmine": "0.3.x",
-    "karma-phantomjs-launcher": "0.1.x",
+    "karma": "0.12.x",
     "karma-chrome-launcher": "0.1.x",
     "karma-firefox-launcher": "0.1.x",
+    "karma-jasmine": "0.3.x",
+    "karma-phantomjs-launcher": "0.1.x",
     "karma-spec-reporter": "0.0.16"
   },
   "devDependencies": {
-    "grunt": "0.4.x",
     "grunt-contrib-internal": "0.4.x"
   },
-  "peerDependencies": {
-  }
+  "peerDependencies": {}
 }
