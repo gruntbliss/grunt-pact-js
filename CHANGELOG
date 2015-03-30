@@ -1,3 +1,7 @@
+v0.3.0-SNAPSHOT:
+ date: 2015-03-27
+ changes:
+   - fixed repo urls in package.json
 v0.2.3:
  date: 2015-03-20
  changes:

@@ -1,4 +1,4 @@
-# grunt-pact-js v0.2.3
+# grunt-pact-js v0.3.0-SNAPSHOT
 
 > Generating Pact Consumer Tests with Grunt and Karma
 
@@ -168,6 +168,7 @@ See also:
 
 ## Release History
 
+ * 2015-03-27   v0.3.0-SNAPSHOT   fixed repo urls in package.json
  * 2015-03-20   v0.2.3   Remove grunt as devDependencies
  * 2015-03-20   v0.2.2   Fixed private flag and grunt-force-task dep
  * 2015-03-20   v0.2.1   Fixed typos in documentation
@@ -178,4 +179,4 @@ See also:
 
 Task submitted by [ devbliss GmbH](https://www.devbliss.com/)
 
-*This file was generated on Fri Mar 27 2015 17:31:54.*
+*This file was generated on Fri Mar 27 2015 17:48:57.*
